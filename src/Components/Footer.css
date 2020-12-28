@@ -1,0 +1,61 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+footer h1 {
+    color: #f2f2f2;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.social_list {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    width: 70%;
+    padding: 0px 10vw;
+    list-style-type: none;
+}
+
+.social_list a {
+    padding: 10px;
+}
+
+.social_list img {
+    width: 35px;
+    filter: invert(0.5) sepia(1) saturate(2) hue-rotate(520.9deg) brightness(1);
+}
+
+footer img:hover {
+    cursor: pointer;
+    filter: invert(0.5) sepia(1) hue-rotate(100deg) saturate(4) brightness(1);
+}
+
+.credits {
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 20px 10px;
+    margin-top: 25px;
+}
+
+.credits p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credits img {
+    max-width: 22px;
+    margin: 0 5px;
+}
+
+.credits a {
+    color: #006aff;
+    margin: 0 5px;
+}

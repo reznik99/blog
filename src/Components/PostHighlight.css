@@ -1,0 +1,21 @@
+.post_highlight {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 15px;
+}
+
+.post_highlight .post_title {
+    color: #031b4e;
+}
+
+.post_highlight .post_author_info {
+    color: rgba(83, 83, 83, 0.884);
+}
+
+.post_highlight .post_author_info a {
+    color: blue;
+}
