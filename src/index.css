@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    background-color: #212121;
 }
 
 *, *:before, *:after {
@@ -15,4 +16,9 @@ body {
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

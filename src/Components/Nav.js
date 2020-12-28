@@ -7,6 +7,7 @@ function Nav() {
                 <li><a href="">Home</a></li>
                 <li><a href="">Blog</a></li>
                 <li><a href="">About Me</a></li>
+                <li><a href="" className="highlight_btn">Sign Up</a></li>
             </ul>
         </nav>
     )

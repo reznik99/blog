@@ -3,6 +3,8 @@
     align-items: center;
     justify-content: flex-end;
     width: 100vw;
+    padding: 0px 15px;
+    background-color: white;
 }
 
 .nav_list {
@@ -15,8 +17,20 @@
 
 .nav_list a {
     padding: 10px 17px;
+    color: black;
 }
 
-.nav_list a:hover {
-    background-color: aqua;
+.nav_list a:not(.highlight_btn):hover {
+    color: #006aff;
+}
+
+.highlight_btn {
+    background-color: #006aff;
+    color: white !important;
+    border-radius: 5px;
+    margin: 0 4px;
+}
+
+.highlight_btn:hover {
+    background-color: #014ab1;
 }
