@@ -12,6 +12,7 @@
     max-width: 790px;
     border-radius: 3px;
     max-height: 169px;
+    object-fit: cover;
 }
 
 .post_title {
@@ -24,6 +25,7 @@
     margin-top: 0;
     margin-bottom: 10px;
     letter-spacing: 0.25px;
+    word-break: break-word;
 }
 
 .post_author_info {

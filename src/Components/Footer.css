@@ -2,9 +2,10 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: black;
+    background-color: var(--main-bg-color);
     color: white;
     text-align: center;
+    padding: 25px 0;
 }
 
 footer h1 {
@@ -37,8 +38,6 @@ footer img:hover {
 }
 
 .credits {
-    background-color: white;
-    color: black;
     width: 100%;
     padding: 20px 10px;
     margin-top: 25px;

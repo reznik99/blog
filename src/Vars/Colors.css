@@ -1,0 +1,22 @@
+:root {
+    /* Light theme */
+    --main-bg-color: #b7b7b8;
+    --secondary-bg-color: #f4f5f9;
+    --main-fg-color: #121212;
+    /* Extras */
+    --main-action-color: #006aff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark theme */
+        --main-bg-color: #121212;
+        --secondary-bg-color: #212121;
+        --main-fg-color: #f4f5f9;
+        /* 
+        --main-bg-color: #212121;
+        --secondary-bg-color: #121212; 
+        */
+        --main-action-color: #006aff;
+    }
+}

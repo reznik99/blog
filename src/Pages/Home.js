@@ -1,4 +1,5 @@
 import './Home.css'
+import '../Vars/Colors.css'
 import { Nav, PostPreview, PostHighlight, Footer } from '../Components';
 
 function Home() {

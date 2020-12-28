@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
-    background-color: #212121;
+    background-color: var(--secondary-bg-color);
+    color: var(--main-fg-color);
 }
 
 *, *:before, *:after {
