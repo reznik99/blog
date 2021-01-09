@@ -17,11 +17,9 @@
 
 .post_title {
     font-family: 'Sailec-Bold', Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
     font-size: 24px;
     line-height: 30px;
-    color: #94b4f9;
+    color: var(--title-color);
     margin-top: 0;
     margin-bottom: 10px;
     letter-spacing: 0.25px;
@@ -31,11 +29,11 @@
 .post_author_info {
     display: flex;
     align-items: center;
-    color: rgba(213, 213, 213, 0.75);
+    color: var(--unimportant-color);
 }
 
 .post_author_info a {
-    color: white;
+    color: var(--link-color);
 }
 
 .post_author_image {
