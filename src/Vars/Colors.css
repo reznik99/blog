@@ -10,18 +10,26 @@
     --title-color: #001e62;
     --link-color: #006aff;
     --unimportant-color: #7a7a7aef;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) { 
     :root {
-        /* Dark theme override*/
-        --main-bg-color: #161616;
-        --secondary-bg-color: #212121;
-        --main-fg-color: #f4f5f9;
-        /* Nav */
-        --logo-color: #97bef5;
-        /* Posts */
-        --title-color: #96b0ee;
-        --unimportant-color: #d5d5d5b7;
+        ...
     }
+}
+*/
+
+[data-theme="dark"] {
+    /* Dark theme override*/
+    --main-bg-color: #161616;
+    --secondary-bg-color: #212121;
+    --main-fg-color: #f4f5f9;
+    /* Nav */
+    --logo-color: #97bef5;
+    /* Posts */
+    --title-color: #96b0ee;
+    --unimportant-color: #d5d5d5b7;
 }

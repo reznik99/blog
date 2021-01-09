@@ -6,14 +6,15 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 9px 20px;
+    padding: 0 25px;
     background-color: var(--secondary-bg-color);
     box-shadow: rgba(3, 27, 78, 0.1) 0px 2px 4px;
     border-bottom: 1px solid var(--main-action-color);
 }
 
 .logo {
-    max-height: 3.75rem;
+    letter-spacing: 2px;
+    font-weight: normal;
     color: var(--logo-color)
 }
 

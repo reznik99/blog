@@ -25,6 +25,25 @@
     -->
     <title>React App</title>
 </head>
+<script>
+    //determines if the user has a set theme. Or default to OS preferred theme
+    function detectColorScheme() {
+        let theme = "light";
+        let storageTheme = localStorage.getItem("theme")
+
+        //OS theme setting detected as dark
+        if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            theme = "dark";
+            console.log("Detected OS Theme preference prefers-color-scheme: dark")
+        }
+        //local storage is used to override OS theme settings
+        if (storageTheme) {
+            theme = storageTheme;
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+    }
+    detectColorScheme();
+</script>
 
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
