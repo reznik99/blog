@@ -3,13 +3,12 @@ footer {
     flex-direction: column;
     width: 100%;
     background-color: var(--main-bg-color);
-    color: white;
+    color: var(--main-fg-color);
     text-align: center;
     padding: 25px 0;
 }
 
 footer h1 {
-    color: #f2f2f2;
     letter-spacing: 2px;
     font-weight: 400;
 }
