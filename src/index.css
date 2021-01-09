@@ -2,6 +2,9 @@ html {
     box-sizing: border-box;
     background-color: var(--secondary-bg-color);
     color: var(--main-fg-color);
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
 }
 
 *, *:before, *:after {

@@ -10,9 +10,6 @@
     --title-color: #001e62;
     --link-color: #006aff;
     --unimportant-color: #7a7a7aef;
-    transition-property: background-color, color;
-    transition-duration: 0.5s;
-    transition-timing-function: linear;
 }
 
 /* @media (prefers-color-scheme: dark) { 

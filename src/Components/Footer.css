@@ -3,7 +3,6 @@ footer {
     flex-direction: column;
     width: 100%;
     background-color: var(--main-bg-color);
-    color: var(--main-fg-color);
     text-align: center;
     padding: 25px 0;
 }
@@ -54,6 +53,6 @@ footer img:hover {
 }
 
 .credits a {
-    color: #006aff;
+    color: var(--link-color);
     margin: 0 5px;
 }

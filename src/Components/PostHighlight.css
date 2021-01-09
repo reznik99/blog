@@ -7,6 +7,9 @@
     padding: 20px;
     margin: 15px;
     width: 370px;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
 }
 
 .post_highlight .post_author_info {
