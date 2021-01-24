@@ -1,6 +1,6 @@
 .post_peek {
     list-style: none;
-    max-width: 870px;
+    width: 100%;
     margin: 0 auto 37px auto;
     display: flex;
     overflow: hidden;
@@ -8,10 +8,22 @@
 
 .post_image {
     width: 100%;
-    max-width: 790px;
+    max-width: 370px;
     border-radius: 3px;
-    max-height: 169px;
+    height: 169px;
     object-fit: cover;
+}
+
+.post_peek .post_image {
+    max-width: 270px;
+}
+
+.post_peek .post_image:hover {
+    filter: blur(2px)
+}
+
+.post_data {
+    flex-grow: 1;
 }
 
 .post_title {
