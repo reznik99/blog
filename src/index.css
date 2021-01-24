@@ -19,6 +19,11 @@ body {
     transition-timing-function: linear;
 }
 
+.App {
+    display: flex;
+    flex-direction: column;
+}
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

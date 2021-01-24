@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import './index.css';
-import { Home } from './Pages';
+import { Home, Blog } from './Pages';
 import { Nav } from './Components'
 
 import reportWebVitals from './reportWebVitals';
@@ -13,8 +13,8 @@ ReactDOM.render(
         <Router>
             <Nav />
             <Switch>
-                <Route path="/blog">
-                    <Home />
+                <Route path="/blog/:blog" >
+                    <Blog />
                 </Route>
                 <Route path="/">
                     <Home />
