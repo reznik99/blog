@@ -1,10 +1,6 @@
 html {
     box-sizing: border-box;
-    background-color: var(--secondary-bg-color);
-    color: var(--main-fg-color);
-    transition-property: background-color, color;
-    transition-duration: 0.5s;
-    transition-timing-function: linear;
+    background-color: black;
 }
 
 *, *:before, *:after {
@@ -16,6 +12,11 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--secondary-bg-color);
+    color: var(--main-fg-color);
+    transition-property: background-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
 }
 
 code {

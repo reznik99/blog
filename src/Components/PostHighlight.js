@@ -4,14 +4,14 @@ function PostHighlight(props) {
     return (
         <div className="post_highlight">
             <a href="/blog/latest-products-and-features-at-digitalocean-december-2020">
-                <img src={props.post_image} alt="blog image" className="post_image" />
+                <img src={props.post_image} alt="blog" className="post_image" />
             </a>
             <div>
                 <div className="post_author_info">
-                    <img src="https://images.prismic.io/www-static/6326cb734e557630247062ec390166664f5d3b63_77d07a0ba7bc27b40afc8f5932c57417.png?auto=compress,format"
-                        alt="Rafael Rosa" className="post_author_image" width="36px" />
+                    <img src={props.author.image}
+                        alt={props.author.name} className="post_author_image" width="36px" />
                     <p>
-                        <a href="/blog/author/rafael_rosa">Rafael Rosa</a> on <a className="tag" href="/blog/tag/product-updates">Product Updates </a> <span> •&nbsp; 2020-12-21</span>
+                        <a href="/blog/author/rafael_rosa">{props.author.name}</a> on <a className="tag" href="/blog/tag/product-updates">Product Updates </a> <span> •&nbsp; 2020-12-21</span>
                     </p>
                 </div>
                 <a href="/blog/latest-products-and-features-at-digitalocean-december-2020">
