@@ -10,7 +10,7 @@ function Nav() {
         <nav className="nav_container">
             <div>
                 <Link to="/">
-                    <h1 className="logo">Francesco's Tech Blog</h1>
+                    <h1 className="logo">QUICC BYTE</h1>
                     {/* <img src={logo} alt="Logo" className="logo" /> */}
                 </Link>
             </div>
