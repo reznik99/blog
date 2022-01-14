@@ -36,14 +36,14 @@ function Home() {
 
             <div className="hero">
                 <div className="post_highlight_container">
-                    {posts.slice(0, 3).map(post =>
-                        <PostHighlight author={author} post={post} />
+                    {posts.slice(0, 3).map((post, idx) =>
+                        <PostHighlight author={author} post={post} key={idx} />
                     )}
                 </div>
             </div>
             <div className="posts">
-                {posts.map(post =>
-                    <PostPreview author={author} post={post} />
+                {posts.map((post, idx) =>
+                    <PostPreview author={author} post={post} key={idx} />
                 )}
             </div>
             <Footer />
