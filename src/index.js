@@ -1,26 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import reportWebVitals from './reportWebVitals'
 
-import './index.css';
-import { Home, Blog } from './Pages';
+import './index.css'
+import { Home, Blog } from './Pages'
 import { Nav } from './Components'
-
-import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux'
+import { store } from './Store/Store'
 
 ReactDOM.render(
     <React.StrictMode>
-        <Router>
-            <Nav />
-            <Switch>
-                <Route path="/blog/:blog" >
-                    <Blog />
-                </Route>
-                <Route path="/">
-                    <Home />
-                </Route>
-            </Switch>
-        </Router>
+        <Provider store={store}>
+            <Router>
+                <Nav />
+                <Switch>
+                    <Route path="/blog/:blog" >
+                        <Blog />
+                    </Route>
+                    <Route path="/">
+                        <Home />
+                    </Route>
+                </Switch>
+            </Router>
+        </Provider>
     </React.StrictMode>,
     document.getElementById('root')
 );
