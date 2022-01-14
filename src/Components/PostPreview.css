@@ -15,7 +15,7 @@
 }
 
 .post_peek .post_image {
-    max-width: 270px;
+    width: 250px;
 }
 
 .post_peek .post_image:hover {

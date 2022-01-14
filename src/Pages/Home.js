@@ -10,19 +10,19 @@ function Home() {
     }
     const posts = [
         {
-            image: "https://images.prismic.io/www-static/72bd2f14-1db1-4e37-a5a1-8f71e4e1994b_latest-at-do-blog-img.png?auto=compress,format",
-            title: "Latest products and features to learn: December 2020",
-            date: "2020-12-21",
+            image: "https://media.wired.com/photos/59266b6daf95806129f4f659/master/w_960,c_limit/RaspberryPiTA.jpg 960w",
+            title: "How to make a RaspberryPI Remote Controlled car! Websockets & Streams",
+            date: "2021-12-21",
             category: "Product Updates",
         }, {
-            image: "https://images.prismic.io/www-static/91e85a00-b580-4bd0-a9f2-f5cd6f0d3a15_Deploy+Blog+Graphic+v1+%281%29.png?auto=compress,format",
-            title: "Deploy to the cloud: December 2020",
-            date: "2020-12-21",
+            image: "https://www.softwebsolutions.com/wp-content/uploads/2020/11/Blog_Golang-use-cases.jpg",
+            title: "PKCS11 in Golang",
+            date: "2021-06-17",
             category: "Product Updates",
         }, {
-            image: "https://images.prismic.io/www-static/5036ebe6-a85d-4fc8-b9ac-859c2780410e_DO-mission-statement+%281%29.png?auto=compress,format",
-            title: "How to: Deploy to Digital Ocean",
-            date: "2020-12-21",
+            image: "https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/686461/cover-secure-rest-api-in-nodejs-18f43b3033c239da5d2525cfd9fdc98f.png",
+            title: "NodeJS + Express API server guide",
+            date: "2022-01-03",
             category: "Product Updates",
         }, {
             image: "https://images.prismic.io/www-static/72bd2f14-1db1-4e37-a5a1-8f71e4e1994b_latest-at-do-blog-img.png?auto=compress,format",
@@ -36,16 +36,15 @@ function Home() {
 
             <div className="hero">
                 <div className="post_highlight_container">
-                    <PostHighlight author={author} post={posts[0]} />
-                    <PostHighlight author={author} post={posts[1]} />
-                    <PostHighlight author={author} post={posts[2]} />
+                    {posts.slice(0, 3).map(post =>
+                        <PostHighlight author={author} post={post} />
+                    )}
                 </div>
             </div>
             <div className="posts">
-                <PostPreview author={author} post={posts[0]} />
-                <PostPreview author={author} post={posts[1]} />
-                <PostPreview author={author} post={posts[2]} />
-                <PostPreview author={author} post={posts[3]} />
+                {posts.map(post =>
+                    <PostPreview author={author} post={post} />
+                )}
             </div>
             <Footer />
         </div>
