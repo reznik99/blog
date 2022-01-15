@@ -1,23 +1,59 @@
-import { useParams } from "react-router-dom"
-import { useSelector } from 'react-redux'
-import { Container, Chip, Avatar } from '@mui/material'
+import { useState, useEffect } from 'react'
+import { useParams, Link } from "react-router-dom"
+import { useSelector, useDispatch } from 'react-redux'
+import ReactMarkdown from 'react-markdown'
+import rehypeHighlight from 'rehype-highlight'
+import { Container } from '@mui/material'
+
+import { loadPosts, loadPostContent } from '../Store/Actions/UserActions'
 import './Blog.css'
 
-function Blog(props) {
+function Blog() {
     const state = useSelector(state => state.userReducer)
-    let { blog } = useParams()
-    const postData = state.posts.find(post => post.title === blog)
+    const dispatch = useDispatch()
+    const { blog } = useParams()
+    const [postData, setPostData] = useState(state.posts.find(post => post.title === blog))
+
+    // Load post content if not already loaded
+    useEffect(() => {
+        (async () => {
+            // Load posts if not loaded
+            if (!postData) await dispatch(loadPosts())
+
+            // load post markdown if not loaded
+            if (!postData?.content) {
+                const loadedContent = await dispatch(loadPostContent(blog))
+                setPostData(loadedContent)
+            }
+        })()
+    }, [])
+
     return (
-        <Container maxWidth="sm">
-            <h1>{postData.title}</h1>
-            <img className="post_image" style={{ maxWidth: '100%', height: 'auto' }} src={postData.image} alt={postData.title} loading="lazy" />
-            <div style={{ display: 'flex' }}>
-                <Avatar alt={postData.author.name} src={postData.author.image} />
-                <Chip label={postData.author.name} />
-                <Chip label={postData.category} />
-            </div>
-        </Container>
-    );
+        postData
+            ? <Container maxWidth="md" sx={{ paddingBottom: 20 }}>
+                <h1>{postData.title}</h1>
+                <img className="post_image" style={{ maxWidth: '100%', height: 'auto', maxHeight: 300 }} src={postData.image} alt={postData.title} loading="lazy" />
+                <div className="post_author_info">
+                    <img src={state.author.image}
+                        alt={state.author.name} className="post_author_image" width="36px" />
+                    <p>
+                        <Link to={`/post/author/${state.author.name}`}> {state.author.name}</Link> on <Link to={`/post/tag/${postData.category}`}>{postData.category} </Link><span>•&nbsp; {postData.date}</span>
+                    </p>
+                </div>
+                <ReactMarkdown rehypePlugins={[rehypeHighlight]}>{postData.content}</ReactMarkdown>
+                <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
+                    ***
+                </ReactMarkdown>
+                <div className="post_author_info">
+                    <img src={state.author.image}
+                        alt={state.author.name} className="post_author_image" width="36px" />
+                    <p>
+                        <Link to={`/post/author/${state.author.name}`}> {state.author.name}</Link> on <Link to={`/post/tag/${postData.category}`}>{postData.category} </Link><span>•&nbsp; {postData.date}</span>
+                    </p>
+                </div>
+            </Container>
+            : null
+    )
 }
 
 export default Blog;

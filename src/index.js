@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals'
-
+import "highlight.js/styles/github.css"
 import './index.css'
 import { Home, Blog } from './Pages'
 import { Nav } from './Components'
@@ -15,7 +15,7 @@ ReactDOM.render(
             <Router>
                 <Nav />
                 <Switch>
-                    <Route path="/blog/:blog" >
+                    <Route path="/post/:blog" >
                         <Blog />
                     </Route>
                     <Route path="/">
