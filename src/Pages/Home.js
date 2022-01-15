@@ -9,10 +9,13 @@ function Home() {
     const state = useSelector(state => state.userReducer)
     const dispatch = useDispatch()
 
-    useEffect(async () => {
-        if (!state.posts || state.posts.length === 0)
-            await dispatch(loadPosts())
-    }, [])
+    useEffect(() => {
+        const loadData = async () => {
+            if (!state.posts || state.posts.length === 0)
+                await dispatch(loadPosts())
+        }
+        loadData()
+    }, [state.posts, dispatch])
 
     return (
         <div className="App">
