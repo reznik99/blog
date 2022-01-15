@@ -37,7 +37,7 @@ function Blog() {
                     <img src={state.author.image}
                         alt={state.author.name} className="post_author_image" width="36px" />
                     <p>
-                        <Link to={`/blog/author/${state.author.name}`}> {state.author.name}</Link> on <Link to={`/blog/tag/${postData.category}`}>{postData.category} </Link><span>•&nbsp; {postData.date}</span>
+                        <Link to={`/post/author/${state.author.name}`}> {state.author.name}</Link> on <Link to={`/post/tag/${postData.category}`}>{postData.category} </Link><span>•&nbsp; {postData.date}</span>
                     </p>
                 </div>
                 <ReactMarkdown rehypePlugins={[rehypeHighlight]}>{postData.content}</ReactMarkdown>
@@ -48,7 +48,7 @@ function Blog() {
                     <img src={state.author.image}
                         alt={state.author.name} className="post_author_image" width="36px" />
                     <p>
-                        <Link to={`/blog/author/${state.author.name}`}> {state.author.name}</Link> on <Link to={`/blog/tag/${postData.category}`}>{postData.category} </Link><span>•&nbsp; {postData.date}</span>
+                        <Link to={`/post/author/${state.author.name}`}> {state.author.name}</Link> on <Link to={`/post/tag/${postData.category}`}>{postData.category} </Link><span>•&nbsp; {postData.date}</span>
                     </p>
                 </div>
             </Container>
