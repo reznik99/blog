@@ -1,5 +1,5 @@
 import "./PostPreview.css"
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 function PostPreview(props) {
     return (

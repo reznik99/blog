@@ -23,12 +23,11 @@ export function loadPostContent(title) {
             const response = await fetch(`http://localhost:6969/post/${title}`)
             const { postData } = await response.json()
 
-            // Apply content to existing post info
+            // Add post content to existing post
             const newPost = {
                 ...state.posts.find(post => post.title === title),
                 content: postData
             }
-            console.log(newPost)
             dispatch({ type: "FETCH_POSTDATA_SUCCESS", payload: newPost })
         } catch (err) {
             console.log(`Unable to load posts ${err}`)
