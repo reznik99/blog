@@ -13,7 +13,7 @@ function Blog(props) {
     const dispatch = useDispatch()
     const { blog } = useParams()
     let postData = state.posts.find(post => post.title === blog)
-    console.log(postData)
+
     // Load post content if not already loaded
     useEffect(async () => {
         if (!postData) {
